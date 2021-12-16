@@ -16,7 +16,7 @@ const port = process.env.port || process.env.npm_config_port || 7594 // dev port
 
 // All configuration item explanations can be find in https://cli.vuejs.org/config/
 module.exports = {
-  publicPath: '/vue-elementPlus-admin',
+  publicPath: '/vue-elementPlus-admin/',
   outputDir: 'docs',
   assetsDir: 'static',
   lintOnSave: process.env.NODE_ENV === 'development',
