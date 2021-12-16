@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["test"],{feda:function(e,n,t){"use strict";t.r(n);var c=t("7a23"),a={class:"app-container"};function o(e,n,t,o,r,s){return Object(c["openBlock"])(),Object(c["createElementBlock"])("div",a,"test")}var r={name:"Test",setup:function(){return{}}},s=t("6b0d"),p=t.n(s);const u=p()(r,[["render",o]]);n["default"]=u}}]);
