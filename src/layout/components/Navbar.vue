@@ -13,8 +13,9 @@
       <el-dropdown class="avatar-container" trigger="click">
         <div class="avatar-wrapper">
           <img :src="avatar + '?imageView2/1/w/80/h/80'" class="user-avatar" />
-          <el-icon>
-            <caret-bottom />
+          <div class="user-name">admin</div>
+          <el-icon class="el-icon-caret-bottom ">
+            <arrow-down />
           </el-icon>
         </div>
         <template v-slot:dropdown>
@@ -22,14 +23,11 @@
             <router-link to="/">
               <el-dropdown-item>Home</el-dropdown-item>
             </router-link>
-            <a target="_blank" href="https://github.com/PanJiaChen/vue-admin-template/">
+            <a target="_blank" href="https://github.com/LSZ579/vue-elementPlus-admin">
               <el-dropdown-item>Github</el-dropdown-item>
             </a>
-            <a target="_blank" href="https://panjiachen.github.io/vue-element-admin-site/#/">
-              <el-dropdown-item>Docs</el-dropdown-item>
-            </a>
-            <el-dropdown-item divided @click.stop="logout">
-              <span style="display:block;">Log Out</span>
+            <el-dropdown-item  >
+              <span @click="logout"  style="display:block;">Log Out</span>
             </el-dropdown-item>
           </el-dropdown-menu>
         </template>
@@ -150,21 +148,21 @@ export default {
       margin-right: 30px;
 
       .avatar-wrapper {
-        margin-top: 5px;
         position: relative;
-
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        line-height: 50px;
         .user-avatar {
-          cursor: pointer;
           width: 40px;
           height: 40px;
-          border-radius: 10px;
+          border-radius: 50%;
         }
-
+        .user-name{
+          margin-left: 5px;
+        }
         .el-icon-caret-bottom {
-          cursor: pointer;
-          position: absolute;
-          right: -20px;
-          top: 25px;
+          margin-left: 5px;
           font-size: 12px;
         }
       }

@@ -10,6 +10,16 @@ import { isExternal } from '@/utils/validate'
 import { computed } from 'vue'
 export default {
   name: 'SvgIcon',
+    props: {
+    iconClass: {
+      type: String,
+      required: true
+    },
+    className: {
+      type: String,
+      default: ''
+    }
+  },
   setup(props) {
     const isExternals = computed(() => isExternal(props.iconClass))
     const iconName = computed(() => `#icon-${props.iconClass}`)
@@ -31,16 +41,6 @@ export default {
       iconName,
       svgClass,
       styleExternalIcon
-    }
-  },
-  props: {
-    iconClass: {
-      type: String,
-      required: true
-    },
-    className: {
-      type: String,
-      default: ''
     }
   },
 }
