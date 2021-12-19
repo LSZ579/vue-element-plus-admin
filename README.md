@@ -1,16 +1,16 @@
 # vue-elementPlus-template
-vue3版本的vue-element-admin管理平台模板，简洁版，只包含了ElementPlus、Vuex，axios，Vue-router等搭建后台必要的对象，开箱即用
-[线上地址](https://lsz579.github.io/vue-elementPlus-admin/)
+基于vue3版本的vue-element-admin管理平台模板的简洁版，只包含了ElementPlus、Vuex，axios，Vue-router等搭建后台必要的技术框架，开箱即用
+[线上地址](https://lsz579.github.io/vue-element-plus-admin/)
 
 
 ## Build Setup
 
 ```bash
 # 克隆项目
-git clone https://github.com/LSZ579/vue-elementPlus-admin.git
+git clone https://github.com/LSZ579/vue-element-plus-admin.git
 
 # 进入项目目录
-cd vue-elementPlus-admin
+cd vue-element-plus-admin
 
 # 安装依赖
 npm install

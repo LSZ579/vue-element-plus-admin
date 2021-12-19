@@ -1,9 +1,14 @@
 <template>
   <div class="app-container">
     <div class="flex">
-      <div class="flex1"></div>
-      <div class="flex2"></div>
+      <div class="flex1" @click="toClick"></div>
+      <div class="flex2" @click="toClick"></div>
       <div class="flex3"></div>
+    </div>
+    <div class="three">
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
 
   </div>
@@ -40,6 +45,26 @@ export default {
     justify-self: flex-start;
     // align-self: flex-start;
     background-color: rgb(255, 246, 127);
+  }
+}
+.three{
+  width: 200px;
+  height: 200px;
+   margin: 20px;
+  background-color: burlywood;
+  display: flex;
+  justify-content: space-between;
+  div{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: blanchedalmond;
+    &:nth-child(2){
+      align-self: center;
+    }
+    &:nth-child(3){
+      align-self: flex-end;
+    }
   }
 }
 </style>

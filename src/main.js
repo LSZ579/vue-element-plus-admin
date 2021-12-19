@@ -7,7 +7,9 @@ import '@/styles/index.scss'
 import 'element-plus/dist/index.css'
 import '@/router/permission'
 import SvgIcon from '@/components/SvgIcon'// svg component
-
+window.onerror = function(message, source, lineno, colno, error) {
+  console.log(message, source, lineno, colno, error)
+ }
 //main.js
 import { Expand, ChatRound, ArrowDown, CaretBottom,Close,RefreshLeft } from '@element-plus/icons-vue'
 import '@/icons' // icon
