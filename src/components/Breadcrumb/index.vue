@@ -48,7 +48,7 @@ export default {
         router.push(redirect)
         return
       }
-      router.push(this.pathCompile(path))
+      router.push(pathCompile(path))
     }
     getBreadcrumb()
     watch(route, () => {
