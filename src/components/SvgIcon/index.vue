@@ -10,7 +10,7 @@ import { isExternal } from '@/utils/validate'
 import { computed } from 'vue'
 export default {
   name: 'SvgIcon',
-    props: {
+  props: {
     iconClass: {
       type: String,
       required: true
@@ -20,7 +20,7 @@ export default {
       default: ''
     }
   },
-  setup(props) {
+  setup (props) {
     const isExternals = computed(() => isExternal(props.iconClass))
     const iconName = computed(() => `#icon-${props.iconClass}`)
     const svgClass = computed(() => {
@@ -42,7 +42,7 @@ export default {
       svgClass,
       styleExternalIcon
     }
-  },
+  }
 }
 </script>
 

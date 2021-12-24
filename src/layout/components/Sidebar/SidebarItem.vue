@@ -50,11 +50,11 @@ export default {
       default: ''
     }
   },
-  setup(props) {
+  setup (props) {
     const state = reactive({
       onlyOneChild: null
     })
-    function hasOneShowingChild(children = [], parent) {
+    function hasOneShowingChild (children = [], parent) {
       const showingChildren = children.filter(item => {
         if (item.hidden) {
           return false
@@ -75,7 +75,7 @@ export default {
       }
       return false
     }
-    function resolvePath(routePath) {
+    function resolvePath (routePath) {
       if (isExternal(routePath)) {
         return routePath
       }
@@ -83,16 +83,13 @@ export default {
         return props.basePath
       }
       return path.resolve(props.basePath, routePath)
-
     }
     return {
       hasOneShowingChild,
       resolvePath,
       ...toRefs(state)
     }
-  },
-
-
+  }
 
 }
 </script>

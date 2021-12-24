@@ -32,8 +32,8 @@ import { useStore } from 'vuex'
 import { useRouter, useRoute } from 'vue-router'
 export default {
   components: { SidebarItem, Logo },
-  setup() {
-    const store = useStore();
+  setup () {
+    const store = useStore()
     const router = useRouter()
     const route = useRoute()
     const sidebar = computed(() => store.getters.sidebar)
@@ -42,7 +42,7 @@ export default {
     const variables = computed(() => variabless)
     const isCollapse = computed(() => !sidebar.value.opened)
     const activeMenu = computed(() => {
-      const { meta, path } = route;
+      const { meta, path } = route
       if (meta.activeMenu) {
         return meta.activeMenu
       }

@@ -1,11 +1,11 @@
 'use strict'
 const path = require('path')
 
-function resolve(dir) {
+function resolve (dir) {
   return path.join(__dirname, dir)
 }
 
-const name =  'vue3 Admin' // page title
+const name = 'vue3 Admin' // page title
 
 // If your port is set to 80,
 // use administrator privileges to execute the command line.
@@ -13,10 +13,11 @@ const name =  'vue3 Admin' // page title
 // You can change the port by the following methods:
 // port = 9528 npm run dev OR npm run dev --port = 9528
 const port = process.env.port || process.env.npm_config_port || 7594 // dev port
+console.log(process.env.NODE_ENV)
 
 // All configuration item explanations can be find in https://cli.vuejs.org/config/
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'development'?'/':'/vue-element-plus-admin/',
+  publicPath: process.env.NODE_ENV === 'development' ? '/' : '/vue-element-plus-admin/',
   outputDir: 'dist',
   assetsDir: 'static',
   lintOnSave: process.env.NODE_ENV === 'development',
@@ -43,11 +44,11 @@ module.exports = {
   css: {
     loaderOptions: {
       scss: {
-        prependData: `@import "~@/styles/them.scss";`
+        prependData: '@import "~@/styles/them.scss";'
       }
     }
   },
-  chainWebpack(config) {
+  chainWebpack (config) {
     // it can improve the speed of the first screen, it is recommended to turn on preload
     config.plugin('preload').tap(() => [
       {
@@ -78,6 +79,5 @@ module.exports = {
         symbolId: 'icon-[name]'
       })
       .end()
-
   }
 }

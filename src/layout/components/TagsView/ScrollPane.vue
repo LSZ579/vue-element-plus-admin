@@ -1,5 +1,10 @@
 <template>
-  <el-scrollbar ref="scrollContainer" :vertical="false" class="scroll-container" @wheel.prevent="handleScroll">
+  <el-scrollbar
+    ref="scrollContainer"
+    :vertical="false"
+    class="scroll-container"
+    @wheel.prevent="handleScroll"
+  >
     <slot />
   </el-scrollbar>
 </template>
@@ -22,7 +27,7 @@ export default {
   mounted() {
     this.scrollWrapper.addEventListener('scroll', this.emitScroll, true)
   },
-  beforeDestroy() {
+  beforeUnmount() {
     this.scrollWrapper.removeEventListener('scroll', this.emitScroll)
   },
   methods: {
@@ -34,12 +39,11 @@ export default {
     emitScroll() {
       this.$emit('scroll')
     },
-    moveToTarget(currentTag) {
+    moveToTarget(currentTag, ref) {
       const $container = this.$refs.scrollContainer.$el
       const $containerWidth = $container.offsetWidth
       const $scrollWrapper = this.scrollWrapper
-      const tagList = this.$parent.$refs.tag
-
+      const tagList = ref
       let firstTag = null
       let lastTag = null
 
@@ -82,10 +86,8 @@ export default {
   position: relative;
   overflow: hidden;
   width: 100%;
-  ::v-deep {
-    .el-scrollbar__bar {
-      bottom: 0px;
-    }
+  ::v-deep(.el-scrollbar__bar) {
+    bottom: 0px;
     .el-scrollbar__wrap {
       height: 49px;
     }

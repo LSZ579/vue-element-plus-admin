@@ -64,12 +64,12 @@
 
 <script>
 import { validUsername } from '@/utils/validate'
-import { reactive, ref, toRef, nextTick,watch } from 'vue'
+import { reactive, ref, toRef, nextTick, watch } from 'vue'
 import { useStore } from 'vuex'
 import { useRouter, useRoute } from 'vue-router'
 export default {
   name: 'Login',
-  setup() {
+  setup () {
     const router = useRouter()
     const route = useRoute()
     const store = useStore()
@@ -121,7 +121,7 @@ export default {
     watch(route, (routes) => {
       redirect.value = routes.query && routes.query.redirect
     })
-    const handleLogin =async () =>{
+    const handleLogin = async () => {
       refForm.value.validate(valid => {
         if (valid) {
           loading.value = true
@@ -149,7 +149,6 @@ export default {
       password
     }
   }
-  
 
 }
 </script>

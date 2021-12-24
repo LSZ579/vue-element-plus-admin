@@ -1,12 +1,12 @@
 <script>
 import { h } from 'vue'
 export default {
-  created() {
+  created () {
     const { params, query } = this.$route
     const { path } = params
     this.$router.replace({ path: '/' + path, query })
   },
-  render() {
+  render () {
     return h('div') // avoid warning message
   }
 }

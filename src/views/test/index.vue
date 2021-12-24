@@ -5,20 +5,19 @@
       <div class="flex2" @click="toClick"></div>
       <div class="flex3"></div>
     </div>
-    <div class="three">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
+    <el-input style="width:300px;margin:20px" v-model="value"></el-input>
 
   </div>
 </template>
 <script>
+import { ref } from 'vue'
 export default {
-  name:'Test',
-  setup(){
+  name: 'Test',
+  setup () {
+    const value = ref('')
+    // console.log(arr instanceof Array)
     return {
-
+      value
     }
   }
 }
@@ -47,24 +46,5 @@ export default {
     background-color: rgb(255, 246, 127);
   }
 }
-.three{
-  width: 200px;
-  height: 200px;
-   margin: 20px;
-  background-color: burlywood;
-  display: flex;
-  justify-content: space-between;
-  div{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: blanchedalmond;
-    &:nth-child(2){
-      align-self: center;
-    }
-    &:nth-child(3){
-      align-self: flex-end;
-    }
-  }
-}
+
 </style>

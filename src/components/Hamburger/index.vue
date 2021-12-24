@@ -25,7 +25,7 @@ export default {
     }
   },
   emits: ['toggleClick'],
-  setup(props, { emit }) {
+  setup (props, { emit }) {
     const toggleClick = () => {
       emit('toggleClick')
     }

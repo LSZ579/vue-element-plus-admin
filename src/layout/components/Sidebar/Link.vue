@@ -6,7 +6,7 @@
 
 <script>
 import { isExternal } from '@/utils/validate'
-import {computed} from 'vue'
+import { computed } from 'vue'
 export default {
   props: {
     to: {
@@ -14,7 +14,7 @@ export default {
       required: true
     }
   },
- setup(props) {
+  setup (props) {
     const isExternals = computed(() => isExternal(props.to))
     const type = computed(() => {
       if (isExternals.value) {

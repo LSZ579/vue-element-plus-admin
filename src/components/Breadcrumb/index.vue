@@ -17,7 +17,7 @@ import pathToRegexp from 'path-to-regexp'
 import { useRoute, useRouter } from 'vue-router'
 import { ref, watch } from 'vue'
 export default {
-  setup() {
+  setup () {
     const route = useRoute()
     const router = useRouter()
     const levelList = ref(null)
@@ -61,8 +61,7 @@ export default {
       pathCompile,
       handleLink
     }
-  },
-
+  }
 
 }
 </script>

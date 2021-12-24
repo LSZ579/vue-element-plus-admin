@@ -40,14 +40,14 @@
 import Breadcrumb from '@/components/Breadcrumb'
 import Hamburger from '@/components/Hamburger'
 import { useStore } from 'vuex'
-import { computed ,nextTick } from 'vue'
+import { computed } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 export default {
   components: {
     Breadcrumb,
     Hamburger
   },
-  setup() {
+  setup () {
     const store = useStore()
     const router = useRouter()
     const route = useRoute()
@@ -58,16 +58,18 @@ export default {
     }
     // 退出登录
     const logout = async () => {
+      await store.dispatch('tagsView/delAllVisitedViews')
       await store.dispatch('user/logout')
+      console.log(store.state.tagsView.visitedViews)
       router.push(`/login?redirect=${route.fullPath}`)
     }
     // 刷新layout
-    const refresh =async () => {
-      const { fullPath } = route;
+    const refresh = async () => {
+      const { fullPath } = route
       await store.dispatch('tagsView/delCachedView', route)
       router.replace({
-        path: "/redirect" + fullPath
-      });
+        path: '/redirect' + fullPath
+      })
     }
     return {
       sidebar,
@@ -76,7 +78,7 @@ export default {
       avatar,
       refresh
     }
-  },
+  }
 }
 </script>
 

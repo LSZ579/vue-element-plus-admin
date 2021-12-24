@@ -22,11 +22,11 @@ export const constantRoutes = [
     component: () => import('@/views/404'),
     hidden: true
   },
-  
+
   {
     path: '/',
     component: Layout,
-    meta: {  icon: 'dashboard',affix: true },
+    meta: { icon: 'dashboard', affix: true },
     redirect: '/dashboard',
     children: [{
       path: 'dashboard',
@@ -40,23 +40,23 @@ export const constantRoutes = [
     name: 'example',
     redirect: '/example/test',
     component: Layout,
-    meta: { title: 'Example', icon: 'example',affix: true },
+    meta: { title: 'Example', icon: 'example', affix: true },
     children: [
       {
         path: 'test',
         name: 'Test',
         component: () => import(/* webpackChunkName: "test" */ '../views/test'),
-        meta:{title:'test',affix: true}
+        meta: { title: 'test', affix: true }
       },
       {
         path: 'about',
-        name: 'about',
+        name: 'About',
         component: () => import(/* webpackChunkName: "about" */ '../views/About'),
-        meta:{title:'About',affix: true}
+        meta: { title: 'About', affix: true }
       }
     ]
   },
-  { path: "/:catchAll(.*)", redirect: '/404', hidden: true }
+  { path: '/:catchAll(.*)', redirect: '/404', hidden: true }
 ]
 
 const router = createRouter({

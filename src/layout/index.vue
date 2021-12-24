@@ -30,7 +30,7 @@ export default {
     TagsView
   },
   mixins: [ResizeMixin],
-  setup() {
+  setup () {
     const store = useStore()
     const sidebar = computed(() => store.state.app.sidebar)
     const device = computed(() => store.state.app.device)
@@ -40,7 +40,7 @@ export default {
         hideSidebar: !sidebar.value.opened,
         openSidebar: sidebar.value.opened,
         withoutAnimation: sidebar.value.withoutAnimation,
-        mobile: device === 'mobile'
+        mobile: device.value === 'mobile'
       }
     })
     const handleClickOutside = () => {
