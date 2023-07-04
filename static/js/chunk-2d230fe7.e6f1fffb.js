@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d230fe7"],{ef3c:function(e,r,t){"use strict";t.r(r);var a=t("18a7"),c={created(){const{params:e,query:r}=this.$route,{path:t}=e;this.$router.replace({path:"/"+t,query:r})},render(){return Object(a["h"])("div")}};const n=c;r["default"]=n}}]);
