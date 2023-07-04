@@ -1,25 +1,11 @@
 <template>
   <div class="app-container">
-    <div class="flex">
-      <div class="flex1" @click="toClick"></div>
-      <div class="flex2" @click="toClick"></div>
-      <div class="flex3"></div>
-    </div>
-    <el-input style="width:300px;margin:20px" v-model="value"></el-input>
-
+    <h1>This is an test page</h1>
   </div>
 </template>
 <script>
-import { ref } from 'vue'
 export default {
-  name: 'Test',
-  setup () {
-    const value = ref('')
-    // console.log(arr instanceof Array)
-    return {
-      value
-    }
-  }
+  name: 'Test'
 }
 </script>
 <style lang="scss" scoped>
