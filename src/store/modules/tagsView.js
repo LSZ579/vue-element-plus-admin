@@ -37,6 +37,7 @@ const mutations = {
   },
 
   DEL_OTHERS_VISITED_VIEWS: (state, view) => {
+    console.log(view.path)
     state.visitedViews = state.visitedViews.filter(v => {
       return v.meta.affix || v.path === view.path
     })
@@ -61,6 +62,7 @@ const mutations = {
   },
 
   UPDATE_VISITED_VIEW: (state, view) => {
+    console.log(state)
     for (let v of state.visitedViews) {
       if (v.path === view.path) {
         v = Object.assign(v, view)
@@ -83,6 +85,7 @@ const actions = {
   },
 
   delView ({ dispatch, state }, view) {
+    console.log(5555666)
     return new Promise(resolve => {
       dispatch('delVisitedView', view)
       dispatch('delCachedView', view)
@@ -106,6 +109,8 @@ const actions = {
   },
 
   delOthersViews ({ dispatch, state }, view) {
+    console.log(5555)
+    console.log(view)
     return new Promise(resolve => {
       dispatch('delOthersVisitedViews', view)
       dispatch('delOthersCachedViews', view)
@@ -116,6 +121,7 @@ const actions = {
     })
   },
   delOthersVisitedViews ({ commit, state }, view) {
+    console.log(view.path)
     return new Promise(resolve => {
       commit('DEL_OTHERS_VISITED_VIEWS', view)
       resolve([...state.visitedViews])
@@ -152,6 +158,7 @@ const actions = {
   },
 
   updateVisitedView ({ commit }, view) {
+    console.log(25666)
     commit('UPDATE_VISITED_VIEW', view)
   }
 }

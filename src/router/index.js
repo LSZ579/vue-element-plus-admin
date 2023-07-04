@@ -40,19 +40,19 @@ export const constantRoutes = [
     name: 'example',
     redirect: '/example/test',
     component: Layout,
-    meta: { title: 'Example', icon: 'example', affix: true },
+    meta: { title: 'Example', icon: 'example' },
     children: [
       {
         path: 'test',
         name: 'Test',
         component: () => import(/* webpackChunkName: "test" */ '../views/test'),
-        meta: { title: 'test', affix: true }
+        meta: { title: 'test' }
       },
       {
         path: 'about',
         name: 'About',
         component: () => import(/* webpackChunkName: "about" */ '../views/About'),
-        meta: { title: 'About', affix: true }
+        meta: { title: 'About' }
       }
     ]
   },

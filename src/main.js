@@ -30,4 +30,4 @@ mockXHR()
 
 app.component('svg-icon', SvgIcon)
 
-app.use(store).use(ElementPlus).use(router).mount('#app')
+app.use(ElementPlus).use(router).use(store).mount('#app')
