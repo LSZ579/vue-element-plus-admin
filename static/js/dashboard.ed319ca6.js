@@ -1,1 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["dashboard"],{b30e:function(n,e,c){"use strict";c.r(e);var o=c("18a7");const t={class:"app-container"};function a(n,e){return Object(o["openBlock"])(),Object(o["createElementBlock"])("div",t," 首页 ")}var r=c("b3f2"),s=c.n(r);const p={},b=s()(p,[["render",a]]);e["default"]=b}}]);
